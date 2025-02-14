@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS budgets (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  category TEXT NOT NULL,
+  budget_limit REAL NOT NULL
+);

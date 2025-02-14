@@ -1,0 +1,84 @@
+<!--index.html--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Finance Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Personal Finance Tracker</h1>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Add Transaction</h2>
+      <form id="transaction-form">
+        <label for="type">Type:</label>
+        <select name="type" id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <button type="submit">Add Transaction</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Transactions</h2>
+      <table id="transaction-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Add Budget</h2>
+      <form id="budget-form">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+        <label for="budget-amount">Amount:</label>
+        <input type="number" id="budget-amount" name="amount" required>
+        <button type="submit">Add Budget</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Budgets</h2>
+      <table id="budget-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="report-section">
+      <h2>Financial Report</h2>
+      <button id="generate-report">Generate Report</button>
+      <div id="report-output"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
